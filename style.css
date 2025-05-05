@@ -137,3 +137,11 @@ nav {
     padding: 20px 10px;
   }
 }
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto; /* ←これが重要！右寄せ */
+}
+
