@@ -6,7 +6,6 @@ body {
 }
 
 header {
-  background: url('massage-room.jpg') no-repeat center center/cover;
   height: 90vh;
   display: flex;
   flex-direction: column;
@@ -134,7 +133,7 @@ nav {
     font-size: 1rem;
   }
 
-  .section, .cta {
+  .section {
     padding: 20px 10px;
   }
 }
