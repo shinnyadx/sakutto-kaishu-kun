@@ -582,3 +582,55 @@ ul {
         padding: 20px;
     }
 }
+
+/* スマホ向けヘッダー調整 */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 120px; /* ヘッダーの高さ分を追加 */
+    }
+    
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 10px 0; /* ヘッダーのパディングを減らす */
+    }
+    
+    .header-logo h1 {
+        font-size: 1.2rem; /* ロゴの文字サイズを小さく */
+        line-height: 1.2;
+    }
+    
+    .header-contact {
+        margin-top: 10px;
+    }
+    
+    .header-tel {
+        font-size: 1.2rem; /* 電話番号のサイズを調整 */
+    }
+    
+    .btn-contact {
+        padding: 8px 15px; /* ボタンのサイズを小さく */
+        font-size: 0.9rem;
+    }
+}
+
+/* さらに小さなデバイス向けの調整 */
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 110px;
+    }
+    
+    .header-logo h1 {
+        font-size: 1rem;
+    }
+    
+    .header-tel {
+        font-size: 1rem;
+    }
+    
+    .header-contact p {
+        font-size: 0.7rem;
+    }
+}
