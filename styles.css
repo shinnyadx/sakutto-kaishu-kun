@@ -523,6 +523,51 @@ ul {
     color: #ccc;
 }
 
+/* ============================================= */
+/* ヘッダー調整用の追加スタイル */
+/* ============================================= */
+.header-spacer {
+    height: 0; /* デフォルトでは非表示 */
+}
+
+/* スマホ表示時の調整 */
+@media (max-width: 768px) {
+    .header-spacer {
+        height: 100px; /* ヘッダーの高さに合わせて調整 */
+    }
+    
+    .header {
+        padding: 8px 0;
+    }
+    
+    .header-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .header-logo h1 {
+        font-size: 1.1rem;
+        line-height: 1.3;
+    }
+    
+    .btn-contact {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .header-tel {
+        font-size: 1rem;
+    }
+}
+
+/* 超小型デバイス用調整 */
+@media (max-width: 400px) {
+    .header-spacer {
+        height: 90px;
+    }
+}
+
 /* レスポンシブ */
 @media (max-width: 768px) {
     .header .container {
