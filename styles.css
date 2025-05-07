@@ -674,3 +674,19 @@ ul {
         font-size: 1.6rem;
     }
 }
+/* 横向き表示用の追加調整 */
+@media (max-width: 768px) and (orientation: landscape) {
+    .header {
+        min-height: 70px;
+    }
+    .hero {
+        padding-top: 90px !important;
+    }
+}
+
+/* 超高解細ディスプレイ用調整 */
+@media (-webkit-min-device-pixel-ratio: 2) {
+    .btn-contact {
+        border-width: 1.5px;
+    }
+}
