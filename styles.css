@@ -533,7 +533,7 @@ ul {
 /* スマホ表示時の調整 */
 @media (max-width: 768px) {
     .header-spacer {
-        height: 115px; /* ヘッダーの高さに合わせて調整 */
+        height: 105px; /* ヘッダーの高さに合わせて調整 */
     }
     
     .header {
