@@ -130,3 +130,16 @@ window.addEventListener('load', function() {
 
 // リサイズ時にも実行
 window.addEventListener('resize', adjustHeroPadding);
+
+// ヘッダーの高さに応じてスペーサーを動的に調整
+function adjustHeaderSpacer() {
+    const header = document.querySelector('.header');
+    const spacer = document.querySelector('.header-spacer');
+    if (header && spacer) {
+        spacer.style.height = `${header.offsetHeight}px`;
+    }
+}
+
+// ページ読み込み時とリサイズ時に実行
+window.addEventListener('load', adjustHeaderSpacer);
+window.addEventListener('resize', adjustHeaderSpacer);
