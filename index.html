@@ -3,46 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>風俗・メンズエステ キャンセル料回収代行サービス | 未入金・キャンセル料を確実に回収</title>
+    <title>風俗・メンズエステ キャンセル料回収代行サービス | 未入金・キャンセル料をサクッと回収</title>
     <meta name="description" content="風俗店・メンズエステのキャンセル料・未入金回収を代行します。法律に基づいた確実な回収で売上アップをサポート。">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-      <!-- ヘッダーをよりシンプルな構造に -->
     <header class="header">
+
+        <a href="/" class="site-logo" id="site-logo">
+            <img src="A_logo_with_bold_red_background_features_Japanese_.png" alt="サクッと回収くん ロゴ" />
+        </a>
+        
+
         <div class="container">
-             <div class="header-inner"> <!-- このラッパーを追加 -->
             <div class="header-logo">
                 <h1>風俗・メンズエステ<br>キャンセル料回収代行</h1>
             </div>
-            <div class="header-contact">
-                <a href="#contact" class="btn-contact">無料相談はこちら</a>
-                <div class="header-tel">
-                    <i class="fas fa-phone-alt"></i>
-                    <span>0120-XXX-XXX</span>
-                </div>
-                <p>受付時間 10:00～19:00（土日祝除く）</p>
-            </div>
+          
         </div>
     </header>
- <!-- ヒーローセクションにheader-spacerを追加 -->
-    <div class="header-spacer"></div> <!-- この要素を追加 -->
+
+    <!-- ハンバーガーメニュー（右上固定） -->
+<div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!-- ドロワーメニュー -->
+<nav class="drawer-menu" id="drawerMenu">
+    <ul>
+        <li><a href="#service">サービス内容</a></li>
+        <li><a href="#flow">回収の流れ</a></li>
+        <li><a href="#fee">料金体系</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+    </ul>
+</nav>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
 
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2>キャンセル料・未入金を<br>確実に回収します</h2>
-                <p>風俗店・メンズエステ専門のキャンセル料回収代行サービス</p>
+                <h2 class="hero-animate">キャンセル料・未入金を<br>サクッと<span class="hero-kaishu">回収</span>します</h2>
+                <p>風俗店・メンズエステ専門の<br>キャンセル料回収代行サービス</p>
                 <ul class="hero-features">
-                    <li><i class="fas fa-check-circle"></i> 成功報酬制だからリスクゼロ</li>
-                    <li><i class="fas fa-check-circle"></i> 法律に基づいた確実な回収</li>
-                    <li><i class="fas fa-check-circle"></i> 業界専門のスタッフが対応</li>
+                    <li>
+                        <span class="icon-wrap">
+                            <i class="fas fa-circle default"></i>
+                            <i class="fas fa-check-circle checked"></i>
+                        </span>
+                        成功報酬制だからリスクゼロ
+                    </li>
+                    <li>
+                        <span class="icon-wrap">
+                            <i class="fas fa-circle default"></i>
+                            <i class="fas fa-check-circle checked"></i>
+                        </span>
+                        法律に基づいた適正な回収
+                    </li>
+                    <li>
+                        <span class="icon-wrap">
+                            <i class="fas fa-circle default"></i>
+                            <i class="fas fa-check-circle checked"></i>
+                        </span>
+                        業界専門のスタッフが対応
+                    </li>
                 </ul>
-                <a href="#contact" class="btn-cta">無料相談する</a>
+                
+                <a href="https://lin.ee/xxxxxxxx" target="_blank" rel="noopener" class="btn-line-hero">
+                    LINEで無料相談
+                </a>
+                <p class="hero-line-desc">
+                    公式LINEからご相談・ご依頼いただくと<br>
+                    面倒な手続きもトークで完結できます！
+                </p>
             </div>
         </div>
     </section>
+
+ 
 
     <section class="problem">
         <div class="container">
@@ -270,5 +312,14 @@
     </footer>
 
     <script src="script.js"></script>
+    
+    <!-- 固定フッターLINEボタン -->
+<div class="fixed-footer">
+    <a href="https://lin.ee/xxxxxxxx" target="_blank" rel="noopener" class="fixed-footer-line">
+        <img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="LINEで友だち追加" style="height:28px;vertical-align:middle;">
+        <span>LINEで無料相談</span>
+    </a>
+</div>
+
 </body>
 </html>
