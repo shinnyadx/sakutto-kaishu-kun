@@ -105,3 +105,61 @@ document.querySelectorAll('.hero-features li').forEach(li => {
         this.classList.toggle('active');
     });
 });
+
+// スクロールで .section-title に .visible を付ける
+document.addEventListener('DOMContentLoaded', function() {
+    function showOnScroll() {
+        document.querySelectorAll('.section-title').forEach(function(title) {
+            const rect = title.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.83) {
+                title.classList.add('visible');
+            }
+        });
+    }
+    window.addEventListener('scroll', showOnScroll);
+    showOnScroll(); // 初回実行
+});
+
+document.querySelectorAll('.review-card').forEach(card => {
+  card.addEventListener('click', function(e) {
+    const ripple = document.createElement('span');
+    ripple.className = 'ripple';
+    ripple.style.left = `${e.offsetX}px`;
+    ripple.style.top = `${e.offsetY}px`;
+    this.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 800);
+  });
+});
+
+// 改善版JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+  const el = document.querySelector('.problem-text');
+  if (!el) return;
+
+  function showProblemText() {
+    const rect = el.getBoundingClientRect();
+    // より緩やかな表示条件に変更
+    if (rect.top < window.innerHeight * 0.9) {
+      el.classList.add('visible');
+      window.removeEventListener('scroll', showProblemText);
+    }
+  }
+
+  // Intersection Observerを使用したより確実な方法
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    observer.observe(el);
+  } else {
+    // フォールバックとして従来の方法を使用
+    window.addEventListener('scroll', showProblemText);
+    showProblemText(); // 初期チェック
+  }
+});
