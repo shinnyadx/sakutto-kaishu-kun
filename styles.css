@@ -1222,10 +1222,3 @@ body {
   padding-top: 70px;  /* ← お好みの数字。100〜150pxくらい好きに調整！ */
 }
 
-#service {
-  display: block;
-  height: 84px;
-  margin-top: -84px;
-  visibility: hidden;
-  pointer-events: none;
-}
