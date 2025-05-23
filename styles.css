@@ -886,6 +886,7 @@ body {
     cursor: pointer;
     position: relative;
     transition: box-shadow 0.23s, border-color 0.17s;
+    gap: 0;
 }
 
 .icon-wrap {
@@ -947,6 +948,7 @@ body {
 .solution-banner {
     background: #111;
     padding: 38px 0 32px 0;
+    position: relative;
 }
 .solution-banner p {
     color: #fff;
@@ -1155,6 +1157,9 @@ body {
   padding: 0.5em 1.4em;
   margin-bottom: 0.7em;
   text-align: center;            /* 念のため残す */
+  position: sticky;
+  top: 68px;      /* ヘッダーの高さに合わせて調整！（例:68px） */
+  z-index: 900;   /* ヘッダーより下、他より上にしたい場合 */
 }
 
 .problem-text.visible {
@@ -1189,3 +1194,38 @@ body {
   animation: bounceIn 1s cubic-bezier(.34,1.56,.64,1) 0.05s 1 both;
 }
 
+/* デフォルト（通常時）は色そのまま（変化なしでOK） */
+.word-kaishu, .word-muryou, .word-houritsu, .word-gyoukai {
+  transition: color 0.25s;
+}
+
+/* liが.activeの時だけ色が変わる */
+.hero-features li.active .word-kaishu {
+  color: #FFD600; /* 黄色（ロゴと同じ） */
+}
+.hero-features li.active .word-muryou,
+.hero-features li.active .word-houritsu,
+.hero-features li.active .word-gyoukai {
+  color: #e74c3c; /* 赤 */
+}
+
+.word-kaishu,
+.word-muryou,
+.word-houritsu,
+.word-gyoukai {
+  display: inline;                   /* ← ここは必ずinline（デフォルトだけど明示しておく） */
+  font-feature-settings: "palt";     /* ← 日本語のアキ調整 */
+  letter-spacing: 0;                 /* ← アキを強制リセット */
+  transition: color 0.25s;
+}
+.lawyer {
+  padding-top: 70px;  /* ← お好みの数字。100〜150pxくらい好きに調整！ */
+}
+
+#service {
+  display: block;
+  height: 84px;
+  margin-top: -84px;
+  visibility: hidden;
+  pointer-events: none;
+}

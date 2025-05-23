@@ -163,3 +163,49 @@ document.addEventListener('DOMContentLoaded', function() {
     showProblemText(); // 初期チェック
   }
 });
+document.addEventListener('DOMContentLoaded', function() {
+  const banner = document.querySelector('.solution-banner');
+  const lawyerSection = document.querySelector('.lawyer'); // 弁護士紹介セクション
+  const header = document.querySelector('.header');
+  const headerHeight = header ? header.offsetHeight : 68;
+
+  // 追加：ダミーのプレースホルダを作成
+  let placeholder = document.createElement('div');
+  placeholder.style.display = 'none';
+  banner.parentNode.insertBefore(placeholder, banner);
+
+  function stickyHandler() {
+    const bannerRect = banner.getBoundingClientRect();
+    const lawyerRect = lawyerSection.getBoundingClientRect();
+
+    // バナーが画面上端に到達したら
+    if (bannerRect.top <= headerHeight && lawyerRect.top > headerHeight + bannerRect.height) {
+      banner.classList.add('sticky-active');
+      banner.style.top = headerHeight + "px";
+      banner.style.width = bannerRect.width + "px";
+      banner.style.left = bannerRect.left + "px";
+      banner.style.zIndex = 999;
+      banner.style.position = 'fixed';
+
+      // ★ダミー表示＆高さセット
+      placeholder.style.display = 'block';
+      placeholder.style.height = bannerRect.height + 'px';
+
+    } else {
+      banner.classList.remove('sticky-active');
+      banner.style.position = '';
+      banner.style.top = '';
+      banner.style.width = '';
+      banner.style.left = '';
+      banner.style.zIndex = '';
+
+      // ★ダミー非表示
+      placeholder.style.display = 'none';
+      placeholder.style.height = '';
+    }
+  }
+
+  window.addEventListener('scroll', stickyHandler);
+  window.addEventListener('resize', stickyHandler);
+});
+
