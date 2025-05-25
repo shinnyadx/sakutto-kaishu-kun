@@ -317,8 +317,10 @@ ul {
 
 /* 料金セクション */
 .fee {
-    padding: 80px 0;
+    padding: 70px 0;
+    background-color: #f9f9f9;
 }
+
 
 .fee-content {
     display: grid;
@@ -355,8 +357,9 @@ ul {
 /* FAQセクション */
 .faq {
     padding: 80px 0;
-    background-color: #f9f9f9;
+    background-color: #fff;
 }
+
 
 .faq-items {
     max-width: 800px;
@@ -1222,3 +1225,10 @@ body {
   padding-top: 70px;  /* ← お好みの数字。100〜150pxくらい好きに調整！ */
 }
 
+.service-item {
+  padding: 36px 18px 32px 18px;
+}
+
+.service-item p {
+  text-align: left;
+}
