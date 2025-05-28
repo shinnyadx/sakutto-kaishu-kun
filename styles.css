@@ -317,9 +317,10 @@ ul {
 
 /* 料金セクション */
 .fee {
-    padding: 70px 0;
+    padding: 70px 0 30px 0;  /* 上70px・横0・下30px・横0 */
     background-color: #f9f9f9;
 }
+
 
 
 .fee-content {
@@ -356,9 +357,10 @@ ul {
 
 /* FAQセクション */
 .faq {
-    padding: 80px 0;
+    padding: 80px 0 24px 0;
     background-color: #fff;
 }
+
 
 
 .faq-items {
@@ -412,10 +414,15 @@ ul {
 /* CTAセクション */
 .cta {
     padding: 80px 0;
-    background: linear-gradient(rgba(231, 76, 60, 0.9), rgba(231, 76, 60, 0.9)), url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    background: 
+      linear-gradient(rgba(231, 76, 60, 0.9), rgba(231, 76, 60, 0.9)), 
+      url('hands.png') no-repeat;
+    background-position: 43% 80%;
+    background-size: cover;
     color: #fff;
     text-align: center;
 }
+
 
 .cta h2 {
     font-size: 2rem;
@@ -1013,48 +1020,119 @@ body {
 }
 
 .lawyer-card {
-    display: flex;
-    align-items: center;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-    padding: 34px 24px;
-    gap: 36px;
-    margin-bottom: 40px;
-    max-width: 750px;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 22px rgba(231,76,60,0.11);
+  padding: 38px 26px;
+  gap: 40px;
+  margin-bottom: 40px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lawyer-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
 }
 .lawyer-photo img {
-    width: 120px;
-    height: 120px;
-    border-radius: 100px;
-    object-fit: cover;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
-    background: #f6f6f6;
-    border: 2px solid #e74c3c;
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 3px 18px rgba(231,76,60,0.12);
+  border: 2.5px solid #e74c3c;
+  background: #f6f6f6;
 }
 .lawyer-profile h3 {
-    font-size: 1.3rem;
-    color: #e74c3c;
-    margin-bottom: 10px;
+  font-size: 1.12rem;
+  color: #888;
+  margin-bottom: 5px;
+  font-weight: 700;
 }
-.lawyer-profile p {
-    font-size: 1.07rem;
-    margin-bottom: 8px;
+.lawyer-name {
+  color: #333; /* ←ここを黒に */
+  font-size: 1.32rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 3px;
+  letter-spacing: 0.03em;
 }
+.lawyer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  margin-bottom: 13px;
+  font-size: 1.03rem;
+}
+.lawyer-meta > div {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 7px 16px;
+  color: #444;
+  font-size: 0.97em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.lawyer-meta i {
+  color: #e74c3c;
+  margin-right: 4px;
+}
+.lawyer-message {
+  background: #f8f4f2;
+  border-left: 4px solid #e74c3c;
+  border-radius: 10px;
+  padding: 15px 18px;
+  color: #555;
+  font-size: 0.99rem;
+  margin-top: 13px;
+  box-shadow: 0 2px 10px rgba(231,76,60,0.06);
+}
+.lawyer-message p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
 @media (max-width: 600px) {
-    .lawyer-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 18px 6px;
-        gap: 12px;
-    }
-    .lawyer-photo img {
-        width: 96px;
-        height: 96px;
-    }
+  .lawyer-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 18px 8px;
+    gap: 16px;
+  }
+  .lawyer-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .lawyer-photo img {
+    width: 92px;
+    height: 92px;
+  }
+  .lawyer-meta {
+    flex-direction: column;
+    gap: 7px 0;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .lawyer-profile h3,
+  .lawyer-name,
+  .lawyer-message,
+  .lawyer-meta > div {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
+
 
 .review-gallery {
   display: grid;
@@ -1231,4 +1309,44 @@ body {
 
 .service-item p {
   text-align: left;
+}
+
+.fee-tax {
+  font-size: 0.7em;
+  vertical-align: super;
+  color: #666; /* 色も薄めにしても◎ */
+}
+
+.lawyer-left {
+  text-align: left !important;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.contact-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e74c3c;
+  color: #fff;
+  font-weight: bold;
+  padding: 13px 30px;
+  border-radius: 30px;
+  font-size: 1.17rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(231,76,60,0.13);
+  margin: 32px 0 0 0;
+  border: none;
+  transition: background 0.2s, box-shadow 0.18s;
+}
+.contact-btn:hover {
+  background: #c0392b;
+  color: #fff;
+  opacity: 0.92;
 }

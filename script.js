@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // フォーム送信
+   /* // フォーム送信
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
             this.reset();
         });
     }
+*/
 
     // ヘッダースクロール時のスタイル変更
     window.addEventListener('scroll', function() {
