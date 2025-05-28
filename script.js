@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-// script.jsの一番下でOK
+
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         const logo = document.getElementById('site-logo');
